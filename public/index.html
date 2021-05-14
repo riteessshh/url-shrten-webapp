@@ -1,43 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="heading">
+    <img class="logo" src="images/logo.svg" alt="">
+    <img class="menu" src="images/menu-outline.svg" alt="">
+  </div>
+  <div class="show">
+    <div class="nav-bar">
+      <div class="items item1">Features</div>
+      <div class="items item2">Pricing</div>
+      <div class="items item3">Resources</div>
+      <hr class="line">
+      <div class="items item4">Login</div>
+      <div class="items item5">Sign Up</div>
+    </div>
+  </div>
+
+
+  <div class="hero">
+    <img src="images/illustration-working.svg" alt="">
+    <h1>More than just shorter links</h1>
+    <p>Build your brand’s recognition and get detailed insights
+      on how your links are performing.</p>
+
+    <p class="hero-button">Get Started</p>
+  </div>
+  <div class="background-color"></div>
+  <div class="box">
+    <div class="image-sec">
+      <img src="images/bg-shorten-mobile.svg" alt="">
+    </div>
+    <div id="root">
+      <div class="form">
+        <input class="part inputarea" type="text" onChange={handleChange} name="link" placeholder="Shorten a link here..."></input>
+        <button class="part submitbutton" type="submit" onClick={getLink} name="button">Shorten It!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="specs">
+    <h2>Advanced Statistics</h2>
+    <p>Track how your links are performing across the web with our
+      advanced statistics dashboard.</p>
+
+    <div class="vertical-line"></div>
+
+    <div class="stats">
+      <div class="block block1">
+        <div class="icon">
+          <img src="images/icon-brand-recognition.svg" alt="">
+        </div>
+        <div class="innerblock">
+          <h2>Brand Recognition</h2>
+          <p>Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+      </div>
+      <div class="block block2">
+        <div class="icon">
+          <img src="images/icon-detailed-records.svg" alt="">
+        </div>
+        <div class="innerblock">
+          <h2>Detailed Records</h2>
+          <p>Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.</p>
+        </div>
+      </div>
+      <div class="block block3">
+        <div class="icon">
+          <img src="images/icon-fully-customizable.svg" alt="">
+        </div>
+        <div class="innerblock">
+          <h2>Fully Customizable</h2>
+          <p>Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-hero">
+    <div class="bg-img-area">
+      <img src="images/bg-boost-mobile.svg" alt="">
+    </div>
+    <div class="text">
+      <h1>Boost your links today</h1>
+      <p>Get Started</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="fitems bottom-logo">
+      <img style="fill: white;" src="images/logo.svg" alt="">
+    </div>
+    <div class="fitems category features">
+      <h3>Features</h3>
+
+      <p>Link Shortening</p>
+      <p>Branded Links</p>
+      <p>Analytics</p>
+    </div>
+    <div class="fitems category resources">
+      <h3>Resources</h3>
+
+      <p>Blog</p>
+      <p>Developers</p>
+      <p>Support</p>
+    </div>
+    <div class="fitems category company">
+      <h3>Company</h3>
+
+      <p>About</p>
+      <p>Our Team</p>
+      <p>Careers</p>
+      <p>Contact</p>
+    </div>
+    <div class="fitems social">
+
+      <div class="icons">
+        <img src="images/icon-facebook.svg" alt="">
+      </div>
+      <div class="icons">
+        <img src="images/icon-twitter.svg" alt="">
+      </div>
+      <div class="icons">
+        <img src="images/icon-pinterest.svg" alt="">
+      </div>
+      <div class="icons">
+        <img src="images/icon-instagram.svg" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
 </html>
