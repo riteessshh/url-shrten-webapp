@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './master.css'
 
 function App(props) {
 
@@ -30,9 +31,9 @@ function App(props) {
 
 
   return (
-    <div>
-      <input type="text" onChange={handleChange} name="link" value={search}></input>
-      <button type="submit" onClick={getLink} name="button">get links</button>
+    <div className="form">
+      <input className="part inputarea" type="text" onChange={handleChange} name="link" placeholder="Shorten a link here..." value={search}></input>
+      <button className="part submitbutton" type="submit" onClick={getLink} name="button">Shorten It!</button>
       <h1>{links[0]}</h1>
       <h1>{links[1]}</h1>
       <h1>{links[2]}</h1>

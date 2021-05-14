@@ -1,0 +1,31 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.part {
+  padding: 10px;
+  align-items: stretch;
+  border-radius: 4px;
+  border: 0;
+}
+
+.inputarea {
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #bfbfbf;
+}
+
+.submitbutton {
+  margin-top: 20px;
+  background: #2acfcf;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}

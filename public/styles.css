@@ -13,7 +13,7 @@ body {
   width: 30px;
 }
 
-.show {
+.hide {
   display: none;
 }
 
@@ -100,14 +100,6 @@ body {
   width: 100%;
   left: 20%;
   bottom: 15%;
-}
-
-.background-color {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background: #ebebeb;
-  top: 133%;
 }
 
 .form {
@@ -243,6 +235,11 @@ body {
   top: 1%;
   left: 1%;
   width: 100%;
+}
+
+.white-logo {
+  filter: brightness(5);
+  cursor: pointer;
 }
 
 .footer {
