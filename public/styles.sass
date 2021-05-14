@@ -2,6 +2,11 @@ body
   font-family: 'Poppins', sans-serif
   margin: 0
 
+.mobile
+  display: block
+.desktop
+  display: none
+
 .heading
   display: flex
   justify-content: space-between
@@ -14,6 +19,7 @@ body
   display: none
 
 .nav-bar
+  text-align: center
   display: flex
   flex-direction: column
   align-items: center
@@ -27,8 +33,11 @@ body
   padding-bottom: 15px
 
 .items
-  padding: 20px
+  padding: 15px
   font-weight: bold
+.box-1
+  .items
+    padding: 10px
 
 .item5
   background: hsl(180, 66%, 49%)
@@ -215,3 +224,149 @@ body
   width: 200px
   display: flex
   justify-content: space-around
+
+@media (min-width: 1000px)
+
+  .mobile
+    display: none
+  .desktop
+    display: block
+
+  .heading
+    display: inline-block
+    position: relative
+    top: 14px
+    margin-left: 10%
+    margin-top: 20px
+
+  .menu
+    display: none
+  .hide
+    display: block
+
+  .bar-show
+    display: inline-block
+    width: 70%
+
+  .nav-bar
+    background: white
+    color: hsl(0, 0%, 75%)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0
+    width: 95%
+    align-items: baseline
+  .box-1, .box-2
+    display: flex
+    align-items: baseline
+  .item5
+    color: white
+    align-content: flex-end
+    flex-basis: 150px
+    height: 14px
+  hr.line
+    display: none
+
+  .hero
+    display: flex
+    img
+      width: auto
+      order: 9
+      left: 8%
+    h1
+      font-size: 5rem
+    p
+      font-size: 1.5rem
+      width: 80%
+      margin-left: 6px
+    .hero-button
+      width: 30%
+      text-align: center
+      margin: auto auto auto 15px
+
+  .hero-box
+    position: relative
+    left: 10.2%
+    text-align: left
+
+  .box
+    margin: 20px auto
+    width: 78%
+    img
+      left: auto
+      bottom: auto
+
+  .form
+    flex-direction: row
+    padding: 40px
+  .inputarea
+    height: 40px
+    flex: 3
+  .submitbutton
+    flex: 1
+    margin-top: 0
+    margin-left: 20px
+
+  .specs
+    padding-bottom: 100px
+    h2
+      font-size: 3rem
+      margin-bottom: 0
+      margin-top: 20px
+    p
+      font-size: 1.3rem
+      margin: auto
+      position: relative
+      width: 40%
+      font-weight: bold
+
+  .vertical-line
+    height: 10px
+    width: 60%
+    top: 63%
+    left: 15%
+  .stats
+    display: flex
+    justify-content: space-around
+    height: 400px
+    margin: auto 110px auto 155px
+  .block
+    display: block
+    height: auto
+    flex-basis: 400px
+    h2
+      font-size: 1.5rem
+      padding: 5px 20px 5px
+    p
+      padding: 0 20px 10px
+      line-height: 1.6
+      font-size: 1.1rem
+      width: auto
+      font-weight: normal
+  .block1
+    align-self: flex-start
+  .block2
+    align-self: center
+  .block3
+    align-self: flex-end
+  .icon
+    left: 5%
+    top: 25px
+  .innerblock
+    padding: 20px 10px 20px
+    text-align: left
+
+  .bottom-hero
+    .text
+      p
+        width: 12%
+        font-weight: bold
+        font-size: 1.3rem
+
+  .footer
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: baseline
+    padding: 20px 100px
