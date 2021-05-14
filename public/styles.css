@@ -270,6 +270,10 @@ body {
   padding: 10px;
 }
 
+.fitems p:hover {
+  color: #2acfcf;
+}
+
 .social {
   width: 200px;
   display: flex;
@@ -322,11 +326,21 @@ body {
     align-items: baseline;
   }
 
+  .items:hover {
+    color: #35323e;
+  }
+
   .item5 {
     color: white;
     align-content: flex-end;
     flex-basis: 150px;
     height: 14px;
+  }
+
+  .item5:hover {
+    filter: brightness(2);
+    filter: contrast(2);
+    color: white;
   }
 
   hr.line {
@@ -353,6 +367,11 @@ body {
     width: 30%;
     text-align: center;
     margin: auto auto auto 15px;
+  }
+  .hero .hero-button:hover {
+    filter: brightness(2);
+    filter: contrast(2);
+    color: white;
   }
 
   .hero-box {
@@ -384,6 +403,12 @@ body {
     flex: 1;
     margin-top: 0;
     margin-left: 20px;
+  }
+
+  .submitbutton:hover {
+    filter: brightness(2);
+    filter: contrast(2);
+    color: white;
   }
 
   .specs {
@@ -459,6 +484,11 @@ body {
     width: 12%;
     font-weight: bold;
     font-size: 1.3rem;
+  }
+  .bottom-hero .text p:hover {
+    filter: brightness(2);
+    filter: contrast(2);
+    color: white;
   }
 
   .footer {

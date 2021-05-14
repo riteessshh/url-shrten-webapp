@@ -35,6 +35,7 @@ body
 .items
   padding: 15px
   font-weight: bold
+
 .box-1
   .items
     padding: 10px
@@ -220,6 +221,9 @@ body
   flex-direction: column
 .fitems
   padding: 10px
+.fitems
+  p:hover
+    color: hsl(180, 66%, 49%)
 .social
   width: 200px
   display: flex
@@ -260,11 +264,17 @@ body
   .box-1, .box-2
     display: flex
     align-items: baseline
+  .items:hover
+    color: hsl(255, 11%, 22%)
   .item5
     color: white
     align-content: flex-end
     flex-basis: 150px
     height: 14px
+  .item5:hover
+    filter: brightness(2)
+    filter: contrast(2)
+    color: white
   hr.line
     display: none
 
@@ -284,6 +294,10 @@ body
       width: 30%
       text-align: center
       margin: auto auto auto 15px
+    .hero-button:hover
+      filter: brightness(2)
+      filter: contrast(2)
+      color: white
 
   .hero-box
     position: relative
@@ -307,6 +321,10 @@ body
     flex: 1
     margin-top: 0
     margin-left: 20px
+  .submitbutton:hover
+    filter: brightness(2)
+    filter: contrast(2)
+    color: white
 
   .specs
     padding-bottom: 100px
@@ -363,6 +381,10 @@ body
         width: 12%
         font-weight: bold
         font-size: 1.3rem
+      p:hover
+        filter: brightness(2)
+        filter: contrast(2)
+        color: white
 
   .footer
     flex-direction: row
