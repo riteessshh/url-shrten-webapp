@@ -1,5 +1,7 @@
 .form {
   position: relative;
+  background: hsl(257, 27%, 26%);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,4 +30,72 @@
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.display {
+  position: relative;
+  background: white;
+  font-size: 0.9rem;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.display hr.line2 {
+  width: 100%;
+  margin: 0;
+}
+.display p {
+  padding-left: 7px;
+}
+.display p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shtrn-link {
+  font-weight: bold;
+  color: #2acfcf;
+}
+
+@media (min-width: 1000px){
+  .display {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: auto;
+    position: relative;
+    margin: 10px auto;
+    font-size: 1.2rem;
+  }
+  .display hr.line2 {
+    display: none;
+  }
+  .display p a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .form {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .inputarea {
+    height: 40px;
+    flex: 3;
+  }
+
+  .submitbutton {
+    flex: 1;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .submitbutton:hover {
+    filter: brightness(2);
+    filter: contrast(2);
+    color: white;
+  }
+
 }

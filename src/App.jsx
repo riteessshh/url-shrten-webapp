@@ -1,12 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import './master.css'
+import List from './List';
 
 function App(props) {
 
   const [search, getsearch] = React.useState("")
   const [links, getLinks] = React.useState("")
-  const data = []
+  // const data = []
+  let [result, setResult] = React.useState(false)
 
   function getLink() {
     axios.get('https://api.shrtco.de/v2/shorten', {
@@ -17,11 +19,11 @@ function App(props) {
     .then(function (response) {
       // handle success
       console.log(response.data.result);
-      data.push(response.data.result.short_link)
-      data.push(response.data.result.short_link2)
-      data.push(response.data.result.short_link3)
-      getLinks(data)
-      console.log(data);
+      // data.push(response.data.result.full_short_link)
+      getLinks(response.data.result.full_short_link)
+      console.log(response.data.result.full_short_link);
+      setResult(true)
+      // search
     })
   }
   function handleChange(event) {
@@ -31,12 +33,15 @@ function App(props) {
 
 
   return (
-    <div className="form">
+    <div>
+      <div className="form">
       <input className="part inputarea" type="text" onChange={handleChange} name="link" placeholder="Shorten a link here..." value={search}></input>
       <button className="part submitbutton" type="submit" onClick={getLink} name="button">Shorten It!</button>
-      <h1>{links[0]}</h1>
-      <h1>{links[1]}</h1>
-      <h1>{links[2]}</h1>
+      </div>
+      { result ? <List
+        search= {search}
+        link= {links}
+      /> : null}
     </div>
   )
 }

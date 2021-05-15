@@ -101,9 +101,20 @@ body {
   color: white;
 }
 
+.background-display {
+  position: relative;
+}
+
+.bg-grey {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 24%;
+  background: #ebebeb;
+}
+
 .box {
   position: relative;
-  background: #3b3054;
   margin: 20px 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -117,6 +128,7 @@ body {
 
 .form {
   position: relative;
+  background: #3b3054;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,6 +157,33 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.display {
+  position: relative;
+  background: white;
+  font-size: 0.9rem;
+  margin: 20px 20px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.display hr.line2 {
+  width: 100%;
+  margin: 0;
+}
+.display p {
+  padding-left: 7px;
+}
+.display p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shtrn-link {
+  font-weight: bold;
+  color: #2acfcf;
 }
 
 .specs {
@@ -387,6 +426,27 @@ body {
   .box img {
     left: auto;
     bottom: auto;
+  }
+
+  .bg-grey {
+    top: 50%;
+  }
+
+  .display {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 75%;
+    position: relative;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+  .display hr.line2 {
+    display: none;
+  }
+  .display p a {
+    text-decoration: none;
+    color: inherit;
   }
 
   .form {
